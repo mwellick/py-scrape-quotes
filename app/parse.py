@@ -125,7 +125,7 @@ def main(output_csv_quotes_path: str) -> None:
     write_quotes(output_csv_quotes_path, quotes)
 
 
-def author(output_csv_authors_path: str):
+def author(output_csv_authors_path: str) -> None:
     write_authors(output_csv_authors_path, author_cache)
 
 
