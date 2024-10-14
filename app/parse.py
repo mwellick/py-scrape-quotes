@@ -120,11 +120,15 @@ def write_authors(output_csv_path: str, authors: dict) -> None:
             )
 
 
-def main(output_csv_quotes_path: str, output_csv_authors_path: str) -> None:
+def main(output_csv_quotes_path: str) -> None:
     quotes = get_all_quotes()
     write_quotes(output_csv_quotes_path, quotes)
+
+
+def author(output_csv_authors_path: str):
     write_authors(output_csv_authors_path, author_cache)
 
 
 if __name__ == "__main__":
-    main("quotes.csv", "authors.csv")
+    main("quotes.csv")
+    author("authors.csv")
